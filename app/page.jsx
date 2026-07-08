@@ -6,6 +6,8 @@ import LoreFrame from '@/components/LoreFrame';
 import SpeciesCard from '@/components/SpeciesCard';
 import StatusChip from '@/components/StatusChip';
 import VeilLink from '@/components/VeilLink';
+import VaultSeal from '@/components/VaultSeal';
+import VaultProgress from '@/components/VaultProgress';
 import { species } from '@/content/species';
 import { config } from '@/lib/config';
 
@@ -245,6 +247,44 @@ export default function Home() {
                     <p style={{ fontWeight: 300, color: 'rgba(221,184,255,.6)', fontSize: '0.95rem' }}>{b}</p>
                   </div>
                 ))}
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <div className="sl" />
+
+      {/* ── THE CELESTIAL VAULT ──────────────────────── */}
+      <section className="vault-teaser">
+        <div className="vt-seal" aria-hidden="true">
+          <VaultSeal opacity={1} />
+        </div>
+        <div className="wrap">
+          <div style={{ maxWidth: 640, position: 'relative', zIndex: 1 }}>
+            <Reveal>
+              <SectionLabel>Treasury of the Realms</SectionLabel>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <h2 className="h2">
+                The Celestial Vault <span className="grad">is open to see</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <p className="sub">
+                Every relic the treasury holds — YC reserves, sealed Kitsari,
+                raffle caches, allied gifts — sits in one chamber, on the record.
+                A community should never wonder what its world is holding.
+              </p>
+            </Reveal>
+            <Reveal delay={0.22}>
+              <VaultProgress compact />
+            </Reveal>
+            <Reveal delay={0.28}>
+              <div style={{ marginTop: '1.8rem' }}>
+                <Link href="/vault" className="btn-p">
+                  ⟡ Enter the Vault
+                </Link>
               </div>
             </Reveal>
           </div>
