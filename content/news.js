@@ -5,6 +5,12 @@
 export const news = [
   {
     date: '2026-07',
+    type: 'shipped',
+    title: 'The Celestial Vault is open',
+    body: 'The treasury of the Realms now has a public chamber. Every relic — YC reserves, sealed Kitsari, raffle caches, allied gifts — is on the record, with a live accumulation tracker and the Vault Chronicle.',
+  },
+  {
+    date: '2026-07',
     type: 'announcement',
     title: 'The new home of the Realms is live',
     body: 'The website has been rebuilt from the ground up — a multi-page world with a Species Archive, the Lore Codex, and a dedicated Build The Realm hall. The Companion Hub arrives next.',
