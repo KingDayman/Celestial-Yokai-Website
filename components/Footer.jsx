@@ -25,6 +25,7 @@ export default function Footer() {
           <div>
             <h4>Participate</h4>
             <Link className="fl" href="/yokai-coin">Yokai Coin</Link>
+            <Link className="fl" href="/vault">The Celestial Vault</Link>
             <Link className="fl" href="/holders">Holder Benefits</Link>
             <Link className="fl" href="/build-the-realm">Build The Realm</Link>
             <Link className="fl" href="/shop">Shop</Link>

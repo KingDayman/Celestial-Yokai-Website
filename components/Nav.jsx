@@ -8,6 +8,7 @@ const links = [
   { href: '/world', label: 'The World' },
   { href: '/world/species', label: 'Species' },
   { href: '/yokai-coin', label: 'Yokai Coin' },
+  { href: '/vault', label: 'The Vault' },
   { href: '/build-the-realm', label: 'Build The Realm' },
   { href: '/shop', label: 'Shop' },
 ];
