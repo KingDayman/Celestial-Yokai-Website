@@ -10,8 +10,8 @@
 
 export const vaultConfig = {
   progressLabel: 'Yokai Coin accumulation',
-  progressCurrent: 15000000,
-  progressGoal: 25000000,
+  progressCurrent: 46570000,
+  progressGoal: 100000000,
   progressUnit: 'YC',
   showProgress: true,
 };
