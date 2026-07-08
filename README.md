@@ -1,4 +1,4 @@
-# Celestial Yokais — Website v2
+# Celestial Yokais — Website v3
 
 The definitive home of the Realms. Next.js 14 (App Router), zero extra dependencies,
 fully static content pages.
@@ -20,6 +20,7 @@ Deploy to Vercel: push this repo and import it — no configuration needed.
 | **All external links, contract address, facts** | `lib/config.js` ← edit here first |
 | Species (add / unseal / edit lore) | `content/species.js` |
 | News / The Record entries | `content/news.js` |
+| **Vault relics, tracker goal, Chronicle** | `content/vault.js` |
 | FAQ | `content/faq.js` |
 | Design tokens + all styling | `app/globals.css` |
 | Artwork | `public/` (WebP, keep sources under 200KB) |
@@ -49,6 +50,38 @@ When adding new external links, use it instead of a plain `<a>`:
   Link text
 </VeilLink>
 ```
+
+## New in v3 — The Celestial Vault (`/vault`)
+
+A public treasury showcase, fully in the site's design language:
+
+- **The Chamber** — a 3D wheel of relics (drag, arrows, arrow keys, tap a card).
+  Auto-turns when idle; honors `prefers-reduced-motion`.
+- **Relic detail** — the gold-cornered lore frame, with collection, quantity,
+  sealed date, and "purpose in the vault."
+- **The Accumulation** — a live YC progress tracker (also featured on the homepage).
+- **Vault Chronicle** — a timeline of every sealing.
+
+### Updating the vault
+
+Everything lives in `content/vault.js` — same workflow as species and news:
+edit, commit, Vercel redeploys. To add a relic, copy an item and give it a
+unique `id`. Leave `image: ''` to render the category glyph, or drop a WebP in
+`/public` and reference it. Set `featured: true` on the relic the wheel should
+open on. Update `vaultConfig` when the YC goal moves.
+
+> The standalone `vault.html` prototype had a passcode "Keeper" editor that
+> saved to the browser and exported JSON. That's intentionally not carried
+> over: a client-side passcode isn't real security, and this repo already has
+> a cleaner publish path (edit `content/vault.js` → commit → auto-deploy).
+
+### v3 also changed
+
+- Nav gained **The Vault**; the mobile hamburger breakpoint moved from
+  860px → 1024px so the fuller nav never overflows.
+- Homepage gained a **Vault teaser** section (between Yokai Coin and Build The
+  Realm) with the live accumulation bar and the rotating seal as backdrop.
+- Footer "Participate" column and The Record both link the vault.
 
 ## What's deliberately not here yet
 
